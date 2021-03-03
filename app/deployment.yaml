@@ -16,4 +16,4 @@ spec:
       - name: webapp1
         image: getting-started:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
