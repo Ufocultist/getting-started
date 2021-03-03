@@ -1,5 +1,10 @@
-FROM node:12-alpine
-WORKDIR /app
+FROM node:current-slim
+
+WORKDIR /usr/src/app
+COPY package.json .
+RUN npm install
+
+EXPOSE 8080
+CMD [ "npm", "start" ]
+
 COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
